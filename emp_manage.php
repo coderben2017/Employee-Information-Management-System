@@ -33,7 +33,7 @@
       $ans = '';
       foreach ( $map as $x ){
         if( $x['MGR'] == $no ){
-          $ans = $ans.'<br />'.$x['ENAME'];
+          $ans = $ans . '<br />' . $x['ENAME'];
           $ans = $ans . digui( $x['EMPNO'], $map );
         }
       }
@@ -158,7 +158,11 @@
             echo "<tr>";
             echo "<td>" . $row['EMPNO'] . "</td>";
             echo "<td>" . $row['ENAME'] . "</td>";
-            echo "<td><img style=\"width:60px;height:60px\" src=\"".$row['IMG'] ."\" /></td>";
+            if (isset($row['IMG'])) {
+              echo "<td><img style=\"width:60px;height:60px\" src=\"".$row['IMG'] ."\" /></td>";
+            } else {
+              echo "<td><img style=\"width:60px;height:60px\" src=\"http://bpic.588ku.com/element_origin_min_pic/01/47/02/12574338a640011.jpg\" /></td>";
+            }
             echo "<td>" . $row['JOB'] . "</td>";
             echo "<td>" . $row['MGRNAME'] . "</td>";
             echo "<td><div class=\"td50\">" . $row['FCNAME'] . "</div></td>";

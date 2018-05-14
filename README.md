@@ -3,6 +3,9 @@
 ### Description
 - a sample CMS about businesses management for the course project of "Web Technology"
 
+### Database Setting
+dbconfig/erpdb.sql
+
 ### Functions
 1. add / delete / edit 
 2. photo update

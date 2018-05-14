@@ -70,7 +70,18 @@
   ?>
 
     <!--照片大图-->
-    <img src="<?php echo $emp['IMG'] ?>" alt="员工照片" style="width:500px;height:500px"/>
+
+    <img 
+      src="<?php 
+        if (isset($emp['IMG'])) {
+          echo $emp['IMG'];
+        } else {
+          echo "http://bpic.588ku.com/element_origin_min_pic/01/47/02/12574338a640011.jpg"; 
+        }
+      ?>" 
+      alt="员工照片"
+      style="width:500px; height:500px"
+    />
 
     <!--功能菜单-->
     <form method="post" action="emp_photo.php" enctype="multipart/form-data">
